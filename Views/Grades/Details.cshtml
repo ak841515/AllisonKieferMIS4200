@@ -1,0 +1,50 @@
+﻿@model AllisonKieferMIS4200.Models.Grade
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Grade</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.course.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.course.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.professor.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professor.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numberCourses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numberCourses)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Courseprice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Courseprice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.gradeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

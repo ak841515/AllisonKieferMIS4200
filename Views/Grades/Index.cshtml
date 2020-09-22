@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AllisonKieferMIS4200.Models.Grade>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.course.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.professor.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numberCourses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Courseprice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.course.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.professor.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numberCourses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Courseprice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.gradeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.gradeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.gradeID })
+        </td>
+    </tr>
+}
+
+</table>
